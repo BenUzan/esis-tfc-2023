@@ -1,6 +1,16 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[lmargin=3.5cm,rmargin=2cm,tmargin=3.5cm,bmargin=2cm]{geometry}
+\usepackage{biblatex}
+\usepackage{hyperref}
+
+\addbibresource{proposition.bib}
+\AtBeginDocument{\def\labelitemi{$\bullet$}}
 
 \begin{document}
+
+\chapter[INTRODUCTION]{INTRODUCTION}
 \section[Sujet]{SUJET}
 \begin{center}
     Conception d’un système de gestion de fidélisation
@@ -41,6 +51,12 @@ Notre recherche s’articule autour des questions suivantes :
 \section[Objectifs de recherche]{OBJECTIFS DE RECHERCHE}
 
 \section[Hyposthèses générales]{HYPOTHÈSE GÉNÉRALES}
+\section[Choix et interet du sujet]{CHOIX ET INTÉRÊT DU SUJET}
+\subsection[short]{INTÉRÊT PERSONNEL}
+
+\subsection[short]{INTÉRÊT SCIENTIFIQUE}
+
+\subsection[short]{INTÉRÊT SOCIÉTAL}
 
 \section[Démarches méthodologiques]{DÉMARCHES MÉTHODOLOGIQUE}
 
@@ -49,4 +65,5 @@ Notre recherche s’articule autour des questions suivantes :
 \section[Résultats attenus]{RÉSULTAT ATTENDUS}
 
 \section[Références bibliographiques]{RÉFÉRENCES BIBLIOGRAPHIQUE}
+\printbibliography
 \end{document}
