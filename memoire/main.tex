@@ -1,0 +1,28 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=2cm]{geometry}
+\usepackage{biblatex}
+\usepackage{csquotes}
+\usepackage{hyperref}
+
+\addbibresource{main.bib}
+\AtBeginDocument{\def\labelitemi{$\bullet$}}
+
+\begin{document}
+
+    \frontmatter
+
+        \input{b.epigraphe.tex}
+        \input{i.table-des-matieres.tex}
+        \input{j.avant-propos.tex}
+
+    \mainmatter
+        
+        \input{k.introduction.tex}
+
+    \appendix
+    \printbibliography
+    \backmatter
+
+\end{document}
