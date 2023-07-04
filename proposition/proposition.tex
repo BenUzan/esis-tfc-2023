@@ -2,7 +2,7 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=2cm]{geometry}
-\usepackage{biblatex}
+\usepackage[sorting=none]{biblatex}
 \usepackage{csquotes}
 \usepackage{hyperref}
 
@@ -13,10 +13,13 @@
 
 \frontmatter
     \chapter*{ÉPIGRAPHE}
-    Le travail de management d’une clientèle est à la vente ce
+    \enquote{\it Le travail de management d’une clientèle est à la vente ce
     que, pour l’agriculture, le travail de fertilisation et
-    d’entretien des sols est à la récolte.
-
+    d’entretien des sols est à la récolte.}
+    \begin{flushright}
+        \it - Pascal PY
+    \end{flushright}
+    
     \chapter*{AVANT-PROPOS}
     Ce travail portant sur "La Conception d’un système de gestion de la fidélisation
     de la clientèle intégrant un système d’aide a la décision
@@ -34,12 +37,12 @@
 \mainmatter
 
     \chapter*{INTRODUCTION}
-        \section[Sujet]{SUJET}
+        \section[Sujet]{Sujet}
         Conception d’un système de gestion de la fidélisation
         de la clientèle intégrant un système d’aide a la décision
         \textit{" Cas de la société de transport MULYKAP. "}
 
-        \section[Context du sujet]{CONTEXTE DU SUJET}
+        \section[Contexte du sujet]{Contexte du sujet}
         %Doit entrer dans l'introduction
         La recherche scientifique anime aujourd’hui tout chercheur
         à pouvoir observer de manière
@@ -68,7 +71,10 @@
         opérationnels de les exploiter à des fins d’analyse conduit, inévitablement, l’entreprise à se
         tourner vers un nouvel informatique dite décisionnelle qui met l’accent sur la
         compréhension de l’environnement de l’entreprise et l’exploitation de ces données à bon
-        escient. En effet, les décideurs de l’entreprise ont besoin d’avoir une meilleure vision de
+        escient.
+        \newline
+
+        En effet, les décideurs de l’entreprise ont besoin d’avoir une meilleure vision de
         leur environnement et de son évolution, ainsi, que des informations auxquelles ils peuvent
         se fier. Cela ne peut se faire qu’en mettant en place des indicateurs de performance clairs
         et pertinents permettant la sauvegarde, l’utilisation de la mémoire de l’entreprise et offrant
@@ -83,15 +89,16 @@
         revenu. \cite*{Barouch2010}
         \newline
 
-        Le choix de notre sujet se justifie par le fait que le marketing
-        est un point essentiel du management.
-        La rentabilité de la masse d’information (pouvoir transformer
-        ce déluge d’information en valeur ajoutée), L’information étant
-        un gage de compétitivité %plein de blabla
+        Le choix de notre sujet se justifie par le fait que le marketing est un point essentiel du
+        management. La rentabilité de la masse d’information (pouvoir transformer ce déluge
+        d’information en valeur ajoutée), l’information étant un gage de compétitivité, surtout
+        de nos jours, toute entreprise voulant prospérer se doit de prioriser la bonne gestion de
+        cette dernière.
 
-    \section[Problématique]{PROBLÉMATIQUES}
-    La société MULYKAP est l’une des grandes entreprises
-    de la province du Haut-Katanga dans le domaine du transport
+    \section[Problématique]{Problématique}
+    La rédaction de tout travail scientifique implique au préalable une préoccupation.
+    C’est dans le soucie de fidéliser le segment client de la société MULYKAP qui est une
+    entreprise active dans le domaine du transport
         \subsection[Problèmes de recherche]{\textit{Problèmes de recherche}}
         La fidélisation du segment client dans les sociétés de transport
         dans la province du Haut-Katanga
@@ -113,23 +120,28 @@
         la gestion de leurs clientèles dont la perspective est de les
         fidéliser
         Notre recherche s’articule autour des questions suivantes :
+        \newline 
             \begin{itemize}
                 \item Comment la société de transport MULYKAP gère-t-elle
                 la relation client ?
+                \newline
                 \item Comment MULYKAP fait-elle pour fidéliser sa clientèle ?
+                \newline
                 \item Comment identifie-t-elle les clients pour une
                 meilleure relation client ?
+                \newline
                 \item De quelle manière obtient-elle le retour client ?
             \end{itemize}
 
-    \section[Objectifs de recherche]{OBJECTIFS DE RECHERCHE}
-
-    \section[Hyposthèses générales]{HYPOTHÈSE GÉNÉRALES}
+    \section[Hypothèses générales]{Hypothèses générales}
+    Après avoir réalisés des recherches préliminaires, nous pouvons émettre, au regard
+    de notre problématique, les hypothèses suivantes :
 
     \section[Choix et interet du sujet]{Choix et intérêts du sujet}
         \subsection[Choix du sujet]{\textit{Choix du sujet}}
-        Notre choix s’est porter sur le système de fidélisation de la clientèle
-        de MULYKAP
+        Dans le cadre général, le choix porté sur ce sujet a été motivé par le souci d’aider
+        la société MULYKAP de pouvoir fidéliser plus aisément le segment client à laide d’un
+        système intégrant un système d’aide à la décision.
         \subsection[Interet du sujet]{\textit{Intérêts du sujet}}
             \begin{itemize}
                 \item [-] Intérêt personnel : en tant qu’ingénieur en management 
@@ -150,9 +162,44 @@
                 des notions apprises tout au long de son parcours dans une filière données.
             \end{itemize}
     \section[Démarches méthodologiques]{Démarches méthodologiques}
-        \subsection[Méthodes]{Méthodes}
-        \subsection[Techniques]{Techniques}
+        \subsection[Méthodes]{\textit{Méthodes}}
+        Une méthode est une manière de conduire sa pensée, d’établir ou de démontrer une
+        vérité suivant certains principes et avec un certain ordre.
+        \newline
 
+        Dans le cadre de notre travail, nous utiliserons la méthode UP (Unified Process).
+        Le Processus Unifié est un processus de développement logiciel \enquote{itératif et incrémental,
+        centré sur l’architecture, conduit par les cas d’utilisation et piloté par les risques.}\cite{Roques2008}
+        \newline
+
+        UML se définit comme un langage de modélisation graphique et textuel destiné à
+        comprendre et décrire des besoins, spécifier et documenter des systèmes, esquisser des
+        architectures logicielles, concevoir des solutions et communiquer des points de vue.\cite{RoqVall2007}
+        \newline
+        
+        UML est le moyen graphique de garantir que \enquote{ce qui se conçoit et se programme
+        bien s’énonce clairement.\footnote[2]{Hugues \textsc{Bersisni}, \textit{La programmation orientée objet}, 7e édition, Eyrolles, Paris, 2017, p. 222}}
+        \subsection[Techniques]{\textit{Techniques}}
+        Les techniques sont des mécanismes qui nous permettent de réaliser nos recherches
+        scientifiques. Pour rendre notre travail facile à réaliser nous avons pris comme techniques : 
+        \newline
+        \begin{itemize}
+            \item [-] L'interview : pour comprendre de façon simple notre travail, nous avons fait des
+            descentes sur terrains, nous avons eu à interroger les techniciens et le manager
+            informatiques, les professeurs informatiques, les collègues, les ainés scientifiques
+            et ceux qui s’intéressent beaucoup plus à l’outil informatique.
+            \newline
+            \item [-] L'observation : nous nous sommes données beaucoup du temps à observer plus
+            attentivement, pour comprendre de manière précise comment ça se passe exactement sur un ordinateur fonctionnel.
+            \newline
+            \item [-] La documentation : la lecture est le moyen efficace de voyager dans le monde
+            de la connaissance. Comme un chercheur, pour parvenir à résoudre un problème
+            dans la société, il nous faut une lecture consistante. Nous avons eu à utiliser les
+            livres scientifiques, nous nous sommes rendus dans les bibliothèques, nous avons
+            consulté des documents sur l’internet, nous avons utilisé différents médias afin de
+            réunir toutes les informations dont nous avons besoin.
+        \end{itemize}
+        
 
     \section[Etat de l'art]{ÉTAT DE L’ART}
     Ce travail se basant sur des informations et une structure d’entreprise particulière, nous ne
