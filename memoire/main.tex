@@ -2,27 +2,26 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=2cm]{geometry}
-\usepackage{biblatex}
+\usepackage[sorting=none]{biblatex}
+\usepackage[acronym]{glossaries}
 \usepackage{csquotes}
+\usepackage{titlesec}
 \usepackage{hyperref}
+\usepackage{pifont}
 
 \addbibresource{main.bib}
 \AtBeginDocument{\def\labelitemi{$\bullet$}}
 
 \begin{document}
-
     \frontmatter
-
-        \input{b.epigraphe.tex}
-        \input{i.table-des-matieres.tex}
-        \input{j.avant-propos.tex}
-
+        \pagenumbering{Roman}
+        \include{liminaire/01-Epigraphe}
+        \include{liminaire/06-Table-des-matieres}
+        \include{liminaire/07-Avant-propos}
     \mainmatter
-        
-        \input{k.introduction.tex}
-
-    \appendix
-    \printbibliography
+        \include{chapitres/00-Chap-0}
+        \include{chapitres/01-Chap-1}
     \backmatter
-
+        \appendix
+        \printbibliography[heading=bibintoc,title={RÉFÉRENCES}]
 \end{document}
