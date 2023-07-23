@@ -11,11 +11,6 @@
 \usepackage{hyperref}
 \usepackage{pifont}
 
-\addto\captionsfrench{% Replace "english" with the language you use
-  \renewcommand{\contentsname}%
-    {TABLE DES MATIÈRES}%
-}
-
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
@@ -24,8 +19,8 @@
 \subsectionfont{\large}
 \subsubsectionfont{\large\selectfont}
 
+\addto\captionsfrench{\renewcommand{\contentsname}{TABLE DES MATIÈRES}}
 \addbibresource{main.bib}
-\AtBeginDocument{\def\labelitemi{$\bullet$}}
 
 \begin{document}
     \frontmatter
