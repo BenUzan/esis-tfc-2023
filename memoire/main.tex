@@ -1,5 +1,8 @@
 \documentclass[a4paper,12pt,oneside]{book}
 \author{Benjamin Uzan Muyumba}
+\title{La conception d’un système informatisé de fidélisation de la clientèle
+intégrant un système d’aide à la décision dans une entreprise de transport
+de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=2cm]{geometry}
@@ -11,8 +14,6 @@
 \usepackage{hyperref}
 \usepackage{pifont}
 
-\addto\captionsfrench{\renewcommand{\contentsname}{TABLE DES MATIÈRES}}
-
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
@@ -23,6 +24,7 @@
 
 \addbibresource{main.bib}
 \AtBeginDocument{\def\labelitemi{$\bullet$}}
+\addto\captionsfrench{\renewcommand{\contentsname}{TABLE DES MATIÈRES}}
 
 \begin{document}
     \frontmatter
@@ -36,6 +38,7 @@
         \include{chapitres/00-Chap-0}
         \include{chapitres/01-Chap-1}
         \include{chapitres/02-Chap-2}
+        \include{chapitres/03-Chap-3}
     \backmatter
         \appendix
         \printbibliography[heading=bibintoc,title={RÉFÉRENCES}]
