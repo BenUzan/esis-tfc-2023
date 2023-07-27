@@ -1,27 +1,31 @@
 \documentclass[a4paper,12pt,oneside]{book}
-\author{Benjamin Uzan Muyumba}
-\title{La conception d’un système informatisé de fidélisation de la clientèle
-intégrant un système d’aide à la décision dans une entreprise de transport
-de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
-\usepackage[french]{babel}
-\usepackage[T1]{fontenc}
 \usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=2cm]{geometry}
 \usepackage[skip=10pt plus1pt, indent=40pt]{parskip}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{newtxtext,newtxmath}
 \usepackage[sorting=none]{biblatex}
 \usepackage[acronym]{glossaries}
+\usepackage{graphicx}
+\graphicspath{ {./images} }
 \usepackage{csquotes}
 \usepackage{titlesec}
 \usepackage{sectsty}
 \usepackage{hyperref}
 \usepackage{pifont}
 
+\author{Benjamin Uzan Muyumba}
+\title{La conception d’un système informatisé de fidélisation de la clientèle
+intégrant un système d’aide à la décision dans une entreprise de transport
+de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
+
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
-\chapterfont{\centering\large}
+\chapterfont{\centering\selectfont\large}
 \sectionfont{\large}
-\subsectionfont{\large}
-\subsubsectionfont{\large\selectfont}
+\subsectionfont{\selectfont\large\itshape}
+\subsubsectionfont{\normalfont\selectfont\large\itshape}
 
 \addbibresource{main.bib}
 \AtBeginDocument{\def\labelitemi{$\bullet$}}
@@ -40,6 +44,7 @@ de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
         \include{chapitres/01-Chap-1}
         \include{chapitres/02-Chap-2}
         \include{chapitres/03-Chap-3}
+        \include{chapitres/04-Chap-4}
     \backmatter
         \appendix
         \printbibliography[heading=bibintoc,title={RÉFÉRENCES}]
