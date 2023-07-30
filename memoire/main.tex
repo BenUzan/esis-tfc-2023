@@ -6,8 +6,10 @@
 \usepackage{newtxtext,newtxmath}
 \usepackage[sorting=none]{biblatex}
 \usepackage[acronym]{glossaries}
+\usepackage{booktabs}
+\usepackage[labelfont=it, textfont=it, singlelinecheck=false]{caption}
+\usepackage{amsmath}
 \usepackage{graphicx}
-\graphicspath{ {./images} }
 \usepackage{csquotes}
 \usepackage{titlesec}
 \usepackage{sectsty}
@@ -19,17 +21,29 @@
 intégrant un système d’aide à la décision dans une entreprise de transport
 de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
 
+\addbibresource{main.bib}
+\graphicspath{ {./images} }
+
+%%% Profondure des section et du niveau
+%%% de consideration
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
+%%% Parametres des tableaux
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{1.6}
+
+%%% Parametres du sectionnement grace a sectsty
 \chapterfont{\centering\selectfont\large}
 \sectionfont{\large}
 \subsectionfont{\selectfont\large\itshape}
 \subsubsectionfont{\normalfont\selectfont\large\itshape}
 
-\addbibresource{main.bib}
-\AtBeginDocument{\def\labelitemi{$\bullet$}}
+%%% Traductions
+\addto\captionsfrencg{\renewcommand{\listfigurename}{LISTE DES FIGURES}}
+\addto\captionsfrench{\renewcommand{\listtablename}{LISTE DES TABLEAUX}}
 \addto\captionsfrench{\renewcommand{\contentsname}{TABLE DES MATIÈRES}}
+\addto\captionsfrench{\def\tablename{Tableau}}
 
 \begin{document}
     \frontmatter
@@ -37,10 +51,15 @@ de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
         \include{liminaire/01-Epigraphe}
         \include{liminaire/02-Dedicace}
         \include{liminaire/03-Remerciements}
-        \include{liminaire/06-Table-des-matieres}
-        \include{liminaire/07-Avant-propos}
+        \include{liminaire/04-Liste-des-figures}
+        \include{liminaire/05-Liste-des-tableaux}
+        \include{liminaire/06-Liste-des-equations}
+        \include{liminaire/07-Liste-des-acronymes}
+        \include{liminaire/08-Table-des-matieres}
+        \include{liminaire/09-Avant-propos}
     \mainmatter
         \include{chapitres/00-Chap-0}
+        \renewcommand{\thechapter}{\Roman{chapter}}
         \include{chapitres/01-Chap-1}
         \include{chapitres/02-Chap-2}
         \include{chapitres/03-Chap-3}
