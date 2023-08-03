@@ -7,20 +7,18 @@
 \usepackage[sorting=none]{biblatex}
 \usepackage[acronym]{glossaries}
 \usepackage{booktabs}
+\usepackage{longtable}
 \usepackage[labelfont=it, textfont=it, singlelinecheck=false]{caption}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{csquotes}
 \usepackage{titlesec}
 \usepackage{sectsty}
 \usepackage{hyperref}
 \usepackage{pifont}
 
-\author{Benjamin Uzan Muyumba}
-\title{La conception d’un système informatisé de fidélisation de la clientèle
-intégrant un système d’aide à la décision dans une entreprise de transport
-de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
-
+%%% Importation des fichiers
 \addbibresource{main.bib}
 \graphicspath{ {./images} }
 
@@ -33,17 +31,26 @@ de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
 \setlength{\tabcolsep}{12pt}
 \renewcommand{\arraystretch}{1.6}
 
+% \titleformat{\chapter}[hang]{\normalfont\bfseries\centering}{\chaptertitlename\ \thechapter:}{1em}{} 
+
 %%% Parametres du sectionnement grace a sectsty
 \chapterfont{\centering\selectfont\large}
-\sectionfont{\large}
+\sectionfont{\selectfont\large}
 \subsectionfont{\selectfont\large\itshape}
-\subsubsectionfont{\normalfont\selectfont\large\itshape}
+\subsubsectionfont{\normalfont\large\itshape}
 
 %%% Traductions
-\addto\captionsfrencg{\renewcommand{\listfigurename}{LISTE DES FIGURES}}
+\addto\captionsfrench{\renewcommand{\listfigurename}{LISTE DES FIGURES}}
 \addto\captionsfrench{\renewcommand{\listtablename}{LISTE DES TABLEAUX}}
 \addto\captionsfrench{\renewcommand{\contentsname}{TABLE DES MATIÈRES}}
 \addto\captionsfrench{\def\tablename{Tableau}}
+
+\author{Benjamin Uzan Muyumba}
+\title{La conception d’un système informatisé de fidélisation de la clientèle
+intégrant un système d’aide à la décision dans une entreprise de transport
+de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
+
+\input{liminaire/acronymes.tex}
 
 \begin{document}
     \frontmatter
@@ -53,7 +60,7 @@ de biens et de personnes. Cas de la société de transport TRANS NGOKAF}
         \include{liminaire/03-Remerciements}
         \include{liminaire/04-Liste-des-figures}
         \include{liminaire/05-Liste-des-tableaux}
-        \include{liminaire/06-Liste-des-equations}
+        %\include{liminaire/06-Liste-des-equations}
         \include{liminaire/07-Liste-des-acronymes}
         \include{liminaire/08-Table-des-matieres}
         \include{liminaire/09-Avant-propos}
