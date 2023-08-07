@@ -133,23 +133,23 @@
             \par
             Nous retrouvons trois types d’indicateurs :
             \par
-                \begin{itemize}
-                    \setlength{\itemsep}{0pt}
-                    \item [\ding{226}] \textbf{Les indicateurs de satisfaction} :
-                    Un indicateur de satisfaction est un outil utilisé pour mesurer
-                    la satisfaction des clients envers un produit, un service ou une
-                    entreprise. Il existe plusieurs indicateurs pour mesurer la
-                    satisfaction client, tels que le nombre de réclamations ou
-                    les indices de satisfaction des clients.
-                    \item [\ding{226}] \textbf{Les indicateurs de fidélisation} :
-                    un indicateur de fidélisation est un outil qui permet de mesurer
-                    la fidélité des clients à une entreprise, un produit ou un service.
-                    Par exemple, le pourcentage de clients fidèles d’une période à l’autre.
-                    \item [\ding{226}] \textbf{Les indicateurs de pénétration} :
-                    ici nous voyons le chiffre d’affaires produit dans l’année
-                    par une clientèle cible rapporté au chiffre d’affaires total
-                    ou la progression de ce chiffre d’affaires d’une année sur l’autre.
-                \end{itemize}
+            \begin{itemize}
+                \setlength{\itemsep}{0pt}
+                \item [\ding{226}] \textbf{Les indicateurs de satisfaction} :
+                Un indicateur de satisfaction est un outil utilisé pour mesurer
+                la satisfaction des clients envers un produit, un service ou une
+                entreprise. Il existe plusieurs indicateurs pour mesurer la
+                satisfaction client, tels que le nombre de réclamations ou
+                les indices de satisfaction des clients.
+                \item [\ding{226}] \textbf{Les indicateurs de fidélisation} :
+                un indicateur de fidélisation est un outil qui permet de mesurer
+                la fidélité des clients à une entreprise, un produit ou un service.
+                Par exemple, le pourcentage de clients fidèles d’une période à l’autre.
+                \item [\ding{226}] \textbf{Les indicateurs de pénétration} :
+                ici nous voyons le chiffre d’affaires produit dans l’année
+                par une clientèle cible rapporté au chiffre d’affaires total
+                ou la progression de ce chiffre d’affaires d’une année sur l’autre.
+            \end{itemize}
             % \subsection[short]{Les commentaire et avis}
             % Le Web est le principal canal d’expression des clients.Les commentaires, avis
             % et autres contributions des clients à propos de votre entreprise sont
@@ -180,7 +180,7 @@
             \par
             \begin{figure}[h]
                 \centering
-                \includegraphics[width=112mm]{bi-image.jpg}
+                \includegraphics[width=100mm]{bi-image.jpg}
                 \caption{ Pyramide modélisant le processus de la BI}
                 \label{fig:pyramideBi}
             \end{figure}
@@ -191,39 +191,182 @@
             de bord. Pour ce faire le schéma ci-dessous illustre :
 
     \section[Cadre théorique]{Cadre théorique}
-        \subsection[La méthode UP]{Le Processus Unifié (\acrshort{up})}
-            \subsubsection[Définition]{Définition}
+        \subsection[Le Processus Unifié (UP)]{Le Processus Unifié (\acrshort{up})}
+            \subsubsection[Définition]{Définition}    
             Le Processus Unifié (ou \acrshort{up}, \acrlong{up} en anglais) est un
             processus de développement logiciel \enquote{itératif et incrémental,
             centré sur l’architecture, conduit par les cas d’utilisation
             et piloté par les risques}. \cite*{Roques2008} Le processus unifie
-            est constitué d’un ensemble de directive afin de produire
+            est constitué d’un ensemble de directive qui permettent de produire
             un logiciel à partir des exigences et des besoins des utilisateurs.
-            \subsubsection[short]{}
+            \subsubsection[Caractéristiques du processus unifié]{Caractéristiques du processus unifié}
+            Le processus unifié est une méthode de développement de logiciel caractérisée par :
+            \par
+            \begin{itemize}
+                \setlength{\itemsep}{0pt}
+                \item [\ding{226}] \textbf{Un pilotage par les cas d’utilisation} : le projet est mené en
+                tenant compte des besoins et des exigences des utilisateurs. Les cas d’utilisation du
+                futur système sont identifiés, décrits avec précision et priorisés.
+                \item [\ding{226}] \textbf{Une démarche centrée sur l’architecture} : tout système
+                complexe doit être décomposé en parties modulaires afin de garantir une maintenance et une
+                évolution facilitées. Cette architecture (fonctionnelle, logique, matérielle, etc.)
+                doit être modélisée en UML et pas seulement documentée en texte.
+                \item [\ding{226}] \textbf{Une approche itérative et incrémentale} : Il est itératif en ce
+                sens que chaque itération est réalisée avec les mêmes activités. À l’issue de chaque itération,
+                une livraison partielle de l’itération est évaluée.
+                \par\noindent
+                Ainsi, un projet est divisé en une suite d’itérations. Chaque itération est une brique
+                ajoutée à l’itération précédente qui doit donc avoir été préalablement réalisée.
+                Quand la dernière itération est réalisée, c’est le projet dans son intégralité qui
+                est alors achevé.
+            \end{itemize}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=130mm]{Cycle_de_dévelopement_du_processus_unifié.png}
+                \caption{Diagramme illustrant le cycle de développement :
+                projets, phases et itérations}
+                \label{fig:CycleDeDev}
+            \end{figure}
+            Le processus unifié, organisé en fonction du temps, est divisé en quatre phases
+            successives. \cite{gabay2008uml} :
+            \par
+            \begin{enumerate}
+                \setlength{\itemsep}{0pt}
+                \item \textbf{La phase d'inception} : Cette phase correspond à l’initialisation du
+                projet où l’on mène une étude d’opportunité et de faisabilité du système
+                à construire. Une évaluation des risques est aussi réalisée dès cette phase.
+                \item \textbf{La phase d’élaboration} : Cette phase reprend les résultats de
+                la phase d'inception et élargit l’appréciation de la faisabilité sur la quasi-totalité
+                des cas d’utilisation. Ces cas d’utilisation se retrouvent dans le diagramme
+                des cas d’utilisation qui est ainsi complété.
+                \item \textbf{La phase de construction} : Cette phase correspond à la production
+                d’une première version du produit. Elle est donc fortement centrée sur les activités
+                de conception, d’implémentation et de test. En effet, les composants et
+                fonctionnalités non implémentés dans la phase précédente le sont ici.
+                \item \textbf{La phase de transition} : la phase de transition permet de faire
+                passer le système informatique des mains des développeurs à celles des utilisateurs finaux.
+                Les mots-clés sont : conversion des données, formation des utilisateurs,
+                déploiement, béta-tests. \cite{Roques2008}
+            \end{enumerate}
+            Une phase peut-être divisée en itérations. Une itération est un circuit complet de développement
+            aboutissant à une livraison (interne ou externe) d’un produit exécutable.
+            Ce produit est un sous-ensemble du produit final en cours de développement, qui
+            croît incrémentalement d’itération en itération pour devenir le système final.
+            Chaque itération au sein d’une phase aboutit à une livraison exécutable du système.
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=130mm]{Processus_unifié_-_enchainements_d'activités_au_cours_du_cycle_de_vie.png}
+                \caption{Diagramme illustrant l’évolution de l’importance
+                relative des différentes disciplines au cours du projet}
+                \label{fig:UpsProfil}
+            \end{figure}
+            
+            \subsubsection[Démarche UP centrée sur l’architecture]{Démarche UP centrée sur l’architecture}
+            Une architecture adaptée est la clé de voûte du succès d'un développement. Elle décrit
+            des choix stratégiques qui déterminent en grande partie les qualités du logiciel (adaptabilité,
+            performances, fiabilité...). \cite{diga2001uml}
+            il existe des digrammes nécessaires à modéliser pour la réalisation d’un processus unifié.
+            \par
+            UML est constitué de 13 diagrammes officiels qui représentent chacun un concept du
+            système ou du logiciel. Le logiciel peut être vu en considérant les aspects fonctionnels et
+            les aspects d’architecture du logiciel. Ces deux aspects sont composés de cinq vues du
+            logiciel à développer, organisés autour des besoins des utilisateurs.
+            \par            
+            Voici les cinq vues regroupant différents diagrammes :
+            \begin{enumerate}
+                \setlength{\itemsep}{0pt}
+                \item \textbf{La vue des besoins utilisateurs} est celle qui guide toutes les autres.
+                Elle définit les besoins des clients du système et centre la définition de
+                l’architecture du système sur la satisfaction (la réalisation) de ces besoins. \cite{diga2001uml}
+                Cette vue comprend :
+                \par
+                \begin{dinglist}{226}
+                    \setlength{\itemsep}{0pt}
+                    \item Le diagramme de cas d’utilisation représente les fonctionnalités (autrement
+                    dit cas d’utilisation) nécessaires aux utilisateurs. 
+                    \item Le diagramme de packages permet de décomposer le système en catégories
+                    ou parties plus facilement observables, appelés « packages ».
+                \end{dinglist}
+                \item \textbf{La vue du processus}  démontre la décomposition du système en processus et en action ; les interactions
+                entre les processus ainsi que la synchronisation et la communication des activités
+                parallèles. Elle comprend :
+                \par
+                \begin{dinglist}{226}
+                    \setlength{\itemsep}{0pt}
+                    \item Le diagramme de séquence qui permet de décrire les différents scénarios
+                    d’utilisation du système.
+                    \item Le diagramme d’activité qui représente le déroulement des actions, sans utiliser
+                    les objets. En phase d’analyse, il est utilisé pour consolider les spécifications d’un
+                    cas d’utilisation.
+                    \item Le diagramme de collaboration (appelé également diagramme de communication)
+                    permet de mettre en évidence les échanges de messages entre objets.
+                    \item Le diagramme d’état-transition permet de décrire le cycle de vie des objets d’une
+                    classe.
+                    \item Le diagramme global d’interaction permet de donner une vue d’ensemble des
+                    interactions du système. Il est réalisé avec le même graphisme que le diagramme
+                    d’activité.
+                    \item Le diagramme de temps est destiné à l’analyse et la conception de systèmes ayant
+                    des contraintes temps-réel
+                \end{dinglist}
+                \item \textbf{La vue logique} a pour but d’identifier les éléments du domaine, les relations et
+                interactions entre ces éléments. Elle comprend :
+                \par
+                \begin{dinglist}{226}
+                    \setlength{\itemsep}{0pt}
+                    \item Le diagramme de classes qui représente les entités
+                    (des informations) manipulées
+                    par les utilisateurs, dans la phase d’analyse.
+                    \item Le diagramme d’objets qui sert à illustrer les classes
+                    complexes en utilisant des exemples d’instances.
+                \end{dinglist}
+                \item \textbf{La vue des composants} met en évidence les différentes parties qui
+                composeront le futur système (fichiers sources, bibliothèques, bases de données,
+                exécutables, etc.). Elle comprend :
+                \par
+                \begin{dinglist}{226}
+                    \item Le diagramme de structure composite qui décrit un
+                    objet complexe lors de son exécution.
+                    \item Le diagramme de composants qui décrit tous les
+                    composants utiles à l’exécution du système (applications, librairies,
+                    instances de base de données, exécutables, etc.).
+                \end{dinglist}
+                \par
+                \item \textbf{La vue de déploiement} décrit les ressources matérielles et la répartition des parties du
+                logiciel sur ces éléments. Elle ne comprend qu’un seul diagramme qui est :
+                \par
+                \begin{dinglist}{226}
+                    \item Le diagramme de déploiement qui correspond à la description de l’environnement
+                    d’exécution du système (matériel, réseau…) et de la façon dont les composants y sont
+                    installés.
+                \end{dinglist}
+            \end{enumerate}
+
         \subsection[La méthode GIMSI]{La méthode \acrshort{gimsi}}
             \subsubsection[Définition]{Définition}
             \acrshort*{gimsi} est une méthode de conception du système de pilotage à base 
             de tableaux de bord, centrée sur les femmes et les hommes,
-            tous décideurs confrontés au risque et à la complexité. \cite*{fernandez2021gimsi}
+            tous décideurs confrontés au risque et à la complexité. \cite*{fernandez2021gimsi} Elle
+            peut aussi être défini comme une méthode de conception et de réalisation de
+            système décisionnel en entreprise.
             \par
-            GIMSI est l'acronymes de :
+            GIMSI est l’acronyme de :
             \par
-                \begin{itemize}
-                    \setlength{\itemsep}{0pt}
-                    \item [\ding{226}] \textbf{G} comme Généralisation :
-                    la méthode s’utilise dans différents domaines.
-                    \item [\ding{226}] \textbf{I} comme Information : l’accès à l’information
-                    pertinente est le fondement de l’aide à la décision.
-                    \item [\ding{226}] \textbf{M} comme Méthode et Mesure : c’est une méthode
-                    et la mesure en est le principe.
-                    \item [\ding{226}] \textbf{S} comme Système et Systémique : son but est de construire le système de pilotage
-                    et de l’intégrer au cœur du système d’information.
-                    \item [\ding{226}] \textbf{I} comme Individualité et Initiative : cette méthode privilégie
-                    l’autonomie des individus pour une prise d’initiative plus naturelle.
-                \end{itemize}
+            \begin{itemize}
+                \setlength{\itemsep}{0pt}
+                \item [\ding{226}] \textbf{G} comme Généralisation :
+                la méthode s’utilise dans différents domaines.
+                \item [\ding{226}] \textbf{I} comme Information : l’accès à l’information
+                pertinente est le fondement de l’aide à la décision.
+                \item [\ding{226}] \textbf{M} comme Méthode et Mesure : c’est une méthode
+                et la mesure en est le principe.
+                \item [\ding{226}] \textbf{S} comme Système et Systémique : son but est de construire le système de pilotage
+                et de l’intégrer au cœur du système d’information.
+                \item [\ding{226}] \textbf{I} comme Individualité et Initiative : cette méthode privilégie
+                l’autonomie des individus pour une prise d’initiative plus naturelle.
+            \end{itemize}
             \subsubsection[Démarche de conception et de réalisation]{Démarche de conception et de réalisation}
             La méthode GIMSI est structurée selon 10 étapes
-            bien identifiées et classées en quatre phases thématiques qui sont presenter
+            bien identifiées et classées en quatre phases thématiques qui sont présenté
             dans \cite*[Tab. \ref{table:phaseEtapeGimsi}]{fernandez2011nouveaux} :
             \begin{longtable}{p{3cm} p{0cm} p{4cm} p{5cm}}
                 \caption{Phases et étapes de GIMSI}
@@ -265,4 +408,7 @@
                 \\\bottomrule
             \end{longtable}
     \section[Conclusion partielle]{Conclusion partielle}
-    ffgfgfgfgf
+    Dans ce chapitre, nous avons parlé de deux grands points qui sont : le cadre conceptuel
+    et le cadre théorique. Pour ce qui est du cadre conceptuel nous avons défini
+    les concepts clés que nous retrouverons dans l’application et pour ce qui est du cadre théorique,
+    nous avons parlé des théories liées au processus UP et à la méthode GIMSI. 
