@@ -11,6 +11,7 @@
 \usepackage[labelfont=it, textfont=it, singlelinecheck=false]{caption}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage[usegeometry]{typearea}
 \usepackage{float}
 \usepackage{csquotes}
 \usepackage{enumitem}
@@ -46,6 +47,20 @@
 \addto\captionsfrench{\renewcommand{\listtablename}{LISTE DES TABLEAUX}}
 \addto\captionsfrench{\renewcommand{\contentsname}{TABLE DES MATIÈRES}}
 \addto\captionsfrench{\def\tablename{Tableau}}
+
+% Commande perso
+\newcommand*\useportrait{%
+   \cleardoublepage
+   \KOMAoptions{paper=portrait,DIV=current}%
+   \newgeometry{left=3.5cm,right=2cm,top=3.5cm,bottom=3cm}%
+}
+\newcommand*\uselandscape{%
+  \cleardoublepage
+  \KOMAoptions{paper=landscape,DIV=current}%
+  \newgeometry{top=3.5cm,bottom=2cm,left=2cm,right=3.5cm}%
+}
+
+\AtBeginDocument{\useportrait}
 
 \author{Benjamin Uzan Muyumba}
 \title{La conception d’un système informatisé de fidélisation de la clientèle
