@@ -1,0 +1,477 @@
+\subsection[La vue des besoins utilisateurs]{La vue des besoins utilisateurs}    
+    \subsubsection[Identification des acteurs]{Identification des acteurs}
+    Voici les acteurs identifiés dans le cadre de notre
+    travail :
+    \par
+        \begin{itemize}
+            \setlength{\itemsep}{0pt}
+            \item [\ding{226}] \textbf{L’internaute} : est celui qui visite
+            notre plateforme sans y être inscrit.
+            \item [\ding{226}] \textbf{Le client} : est celui qui a créé un compte
+            utilisateur dans le système.
+            \item [\ding{226}] \textbf{L’administrateur} : il est chargé de
+            monitorer le système afin d’éviter tout débordement des utilisateurs,
+            et voir tous les mauvais fonctionnements du système et les régler
+            à distance.
+            \item [\ding{226}] \textbf{Le manager} : est celui qui utilise le système
+            pour visualiser le tableau de bord et consulter le rapport.
+        \end{itemize}
+    \subsubsection[Identification des cas d’utilisation]{Identification des cas d’utilisation}
+    Les cas d’utilisations ou fonctionnalités de notre
+    système sont les suivants :
+    \par
+        \begin{itemize}
+            \setlength{\itemsep}{0pt}
+            \item [\ding{226}] Créer compte
+            \item [\ding{226}] S’authentifier
+            \item [\ding{226}] Consulter avis
+            \item [\ding{226}] Afficher notification
+            \item [\ding{226}] Scanner jeton
+            \item [\ding{226}] Donner avis
+            \item [\ding{226}] Établir rapport
+            \item [\ding{226}] Vendre billet
+            \item [\ding{226}] Gérer compte
+            \item [\ding{226}] Ajouter évaluation
+            \item [\ding{226}] Génère tableau de bord
+            \item [\ding{226}] Consulter tableau de bord
+            \item [\ding{226}] Consulter rapport
+        \end{itemize}
+    Chacun des cas figurant dans la liste présenter
+    ci-haut, seras expliquer plus en détaille dans
+    sa description textuelle.
+
+%%%%%%%%%%%%%%%%%%%%%
+%% Page en paysage %%
+%%%%%%%%%%%%%%%%%%%%%
+\uselandscape
+    \subsubsection[Diagrammes de cas d’utilisation]{Diagrammes de cas d’utilisation}
+    Après avoir eu à identifier les acteurs et leurs cas d’utilisation
+    voici comment se présente le diagramme de cas d’utilisation :
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=165mm]{images/dcu_systeme.png}
+            \caption{Diagramme de cas d’utilisation}
+            \label{fig:dcu}
+        \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Page en portrait %%
+%%%%%%%%%%%%%%%%%%%%%%        
+\useportrait
+    \subsubsection[Description textuelle]{Description textuelle}
+        \paragraph[Créer compte]{Créer compte}
+            \begin{longtable}{p{4cm} p{9cm}}
+                \caption{Description textuelle du cas d’utilisation Créer compte}
+                \label{table:usecaseCreeCompte}
+                \\\hline\hline
+                    \textbf{Cas d’utilisation} & \textbf{Créer compte}
+                \\\hline\hline
+                        \textbf{Acteur principal} & L’\textsc{internaute}
+                    \\
+                        \textbf{Acteur secondaire} & -
+                    \\
+                        \textbf{Objectifs} & L’\textsc{internaute} veut être 
+                        enregistré dans le système.
+                    \\
+                        \textbf{Préconditions} & -
+                    \\
+                        \textbf{Postcondition} & Un compte a était créé.
+                    \\
+                        \textbf{Scénario nominal} &
+                            \begin{enumerate}[leftmargin=*]
+                                \item L’\textsc{internaute} clique sur créer compte et le
+                                système affiche un formulaire.
+                                \item L’\textsc{internaute} saisi ses identifiants à savoir
+                                (nom, post-nom, date et année de
+                                naissance, âge et genre) et coordonnées (téléphone, adresse physique
+                                et adresse électronique).
+                                \item L’\textsc{internaute} confirme en cliquant sur créer.
+                                \item Le système enregistre les nouvelles informations
+                                dans la base de données et le
+                                système répond avec un message de succès.
+                            \end{enumerate}
+                    \\
+                        \textbf{Scénario alternatif} &
+                            \begin{enumerate}[leftmargin=*]
+                                \item À partir de l’étape numéro 3 du scenario nominal
+                                le système vérifie et ne valide pas le formulaire
+                                \item Retour à l’étape numéro 1 du scénario principal
+                            \end{enumerate}
+                \\\bottomrule
+            \end{longtable}
+            %\pagebreak
+
+        \paragraph[S’authentifier]{S’authentifier}
+            \begin{longtable}{p{4cm} p{9cm}}
+                \caption{Description textuelle du cas d’utilisation S’authentifier}
+                \label{table:usecaseSauth}
+                \\\hline\hline
+                    \textbf{Cas d’utilisation} & \textbf{S’authentifier}
+                \\\hline\hline
+                        \textbf{Acteur principal} & L’\textsc{internaute}, le \textsc{client},
+                        le \textsc{guichetier}, le \textsc{manager} et l’\textsc{administrateur}
+                    \\
+                        \textbf{Acteur secondaire} & -
+                    \\
+                        \textbf{Objectifs} & L’utilisateur veut accéder au système.
+                    \\
+                        \textbf{Préconditions} & -
+                    \\
+                    \textbf{Scénario nominal} &
+                        \begin{enumerate}[leftmargin=*]
+                            \item L’utilisateur saisis les informations de connexion à savoir (le mot de
+                            passe et l’identifient).
+                            \item Il confirme en cliquant sur le bouton se connecter.
+                            \item Le système vérifie les informations saisies et crée la session.
+                        \end{enumerate}
+                    \\
+                    \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                            \item mm
+                            \item kk
+                        \end{enumerate}
+                    \\
+                    \textbf{Postcondition}
+                \\\bottomrule
+            \end{longtable}
+
+        \paragraph[Consulter avis]{Consulter avis}
+            \begin{longtable}{p{4cm} p{9cm}}
+                \caption{Description textuelle du cas d’utilisation Consulter avis}
+                \label{table:usecaseConsulterAvis}
+                \\\hline\hline
+                    \textbf{Cas d’utilisation} & \textbf{Consulter avis}
+                \\\hline\hline
+                        \textbf{Acteur principal} & aa
+                    \\
+                        \textbf{Acteur secondaire} & bb
+                    \\
+                        \textbf{Objectifs} & dd
+                    \\
+                        \textbf{Préconditions} & dd
+                    \\
+                    \textbf{Scénario nominal} &
+                        \begin{enumerate}[leftmargin=*]
+                            \item dd
+                            \item ddd
+                        \end{enumerate}
+                    \\
+                    \textbf{Scénario alternatif} &
+                        \begin{enumerate}[leftmargin=*]
+                            \item mm
+                            \item kk
+                        \end{enumerate}
+                    \\
+                    \textbf{Postcondition}
+                \\\bottomrule
+            \end{longtable}
+
+        \paragraph[Afficher notification]{Afficher notification}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Afficher notification}
+            \label{table:usecaseAfficherNotification}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Afficher notification}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
+
+        \paragraph[Scanner jeton]{Scanner jeton}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Scanner jeton}
+            \label{table:usecaseScannerJ}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Scanner jeton}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
+
+        \paragraph[Donner avis]{Donner avis}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Donner avis}
+            \label{table:usecaseDonnerAvis}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Donner avis}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
+
+        \paragraph[Établir rapport]{Établir rapport}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Établir rapport}
+            \label{table:usecaseEtablirCompte}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Établir rapport}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
+
+        \paragraph[Vendre billet]{Vendre billet}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Vendre billet}
+            \label{table:usecaseVendreBill}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Vendre billet}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
+
+        \paragraph[Gérer compte]{Gérer compte}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Gérer compte}
+            \label{table:usecaseGereCompte}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Gérer compte}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
+
+        \paragraph[Ajouter évaluation]{Ajouter évaluation}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Ajouter évaluation}
+            \label{table:usecaseAjouterEval}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Ajouter évaluation}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
+
+        \paragraph[Générer tableau de bord]{Générer tableau de bord}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Générer tableau de bord}
+            \label{table:usecaseDashboard}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Générer tableau de bord}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
+
+        \paragraph[Consulter tableau de bord]{Consulter tableau de bord}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Consulter tableau de bord}
+            \label{table:usecaseConsDash}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Consulter tableau de bord}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
+
+        \paragraph[Consulter rapport]{Consulter rapport}
+        \begin{longtable}{p{4cm} p{9cm}}
+            \caption{Description textuelle du cas d’utilisation Consulter rapport}
+            \label{table:usecaseConsulterRapport}
+            \\\hline\hline
+                \textbf{Cas d’utilisation} & \textbf{Consulter rapport}
+            \\\hline\hline
+                    \textbf{Acteur principal} & aa
+                \\
+                    \textbf{Acteur secondaire} & bb
+                \\
+                    \textbf{Objectifs} & dd
+                \\
+                    \textbf{Préconditions} & dd
+                \\
+                \textbf{Scénario nominal} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item dd
+                        \item ddd
+                    \end{enumerate}
+                \\
+                \textbf{Scénario alternatif} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item mm
+                        \item kk
+                    \end{enumerate}
+                \\
+                \textbf{Postcondition}
+            \\\bottomrule
+        \end{longtable}
