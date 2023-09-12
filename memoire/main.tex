@@ -11,14 +11,26 @@
 \usepackage[labelfont=it, textfont=it, singlelinecheck=false]{caption}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage[usegeometry]{typearea}
 \usepackage{float}
 \usepackage{csquotes}
 \usepackage{enumitem}
-\usepackage{titlesec}
+\usepackage[explicit]{titlesec}
 \usepackage{sectsty}
 \usepackage{hyperref}
 \usepackage{pifont}
+\usepackage{setspace}
+
+\pagestyle{headings}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{}
+\fancyfoot{} % clear footer fields
+\fancyfoot[L]{}
+\fancyfoot[R]{}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{0pt}
 
 %%% Importation des fichiers
 \addbibresource{main.bib}
@@ -33,14 +45,14 @@
 \setlength{\tabcolsep}{12pt}
 \renewcommand{\arraystretch}{1.6}
 
-% \titleformat{\chapter}[hang]{\normalfont\bfseries\centering}{\chaptertitlename\ \thechapter:}{1em}{} 
-
 %%% Parametres du sectionnement grace a sectsty
-\chapterfont{\centering\selectfont\large}
 \sectionfont{\selectfont\large}
 \subsectionfont{\selectfont\large\itshape}
 \subsubsectionfont{\normalfont\large\itshape}
 \paragraphfont{\normalfont\large\itshape}
+
+\titleformat{\chapter}[display]{\centering\selectfont\large\bfseries}{Chapitre \thechapter}{12pt}{\centering\MakeUppercase{#1}}
+\titlespacing{\chapter}{10pt}{-40pt}{30pt}
 
 %%% Traductions
 \addto\captionsfrench{\renewcommand{\listfigurename}{LISTE DES FIGURES}}
@@ -48,19 +60,6 @@
 \addto\captionsfrench{\renewcommand{\contentsname}{TABLE DES MATIÈRES}}
 \addto\captionsfrench{\def\tablename{Tableau}}
 
-% Commande perso
-\newcommand*\useportrait{%
-   \cleardoublepage
-   \KOMAoptions{paper=portrait,DIV=current}%
-   \newgeometry{left=3.5cm,right=2cm,top=3.5cm,bottom=3cm}%
-}
-\newcommand*\uselandscape{%
-  \cleardoublepage
-  \KOMAoptions{paper=landscape,DIV=current}%
-  \newgeometry{top=3.5cm,bottom=2cm,left=2cm,right=3.5cm}%
-}
-
-\AtBeginDocument{\useportrait}
 
 \author{Benjamin Uzan Muyumba}
 \title{La conception d’un système informatisé de fidélisation de la clientèle
@@ -68,6 +67,8 @@ intégrant un système d’aide à la décision dans une entreprise de transport
 de biens et de personnes. Cas de la société de transport Classic Coach}
 
 \input{liminaire/acronymes.tex}
+
+\setstretch{1.25}
 
 \begin{document}
     \frontmatter
