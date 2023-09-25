@@ -8,6 +8,7 @@
 \usepackage[acronym]{glossaries}
 \usepackage{booktabs}
 \usepackage{longtable}
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
 \usepackage[labelfont=it, textfont=it, singlelinecheck=false]{caption}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -16,7 +17,6 @@
 \usepackage{enumitem}
 \usepackage[explicit]{titlesec}
 \usepackage{sectsty}
-\usepackage{hyperref}
 \usepackage{pifont}
 \usepackage{setspace}
 
@@ -43,7 +43,7 @@
 
 %%% Parametres des tableaux
 \setlength{\tabcolsep}{12pt}
-\renewcommand{\arraystretch}{1.6}
+\renewcommand{\arraystretch}{1}
 
 %%% Parametres du sectionnement grace a sectsty
 \sectionfont{\selectfont\large}
@@ -74,6 +74,7 @@ de biens et de personnes. Cas de la société de transport Classic Coach}
     \frontmatter
         \pagenumbering{Roman}
         \include{liminaire/01-Epigraphe}
+        \include{liminaire/in_memoriam}
         \include{liminaire/02-Dedicace}
         \include{liminaire/03-Remerciements}
         \include{liminaire/04-Liste-des-figures}

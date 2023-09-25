@@ -75,9 +75,7 @@
         client.
             \subsubsection[Évaluer la satisfaction]{Évaluer la satisfaction}
             L’évaluation de la satisfaction est réalisée après chaque prestation ou après une période
-            bien définie au cours de l’année, auprès d’un échantillon de la clientèle.
-            \par
-            Cette évaluation doit être effectuée, car les organisations ont plutôt
+            bien définie au cours de l’année, auprès d’un échantillon de la clientèle. Cette évaluation doit être effectuée, car les organisations ont plutôt
             tendance à se cacher les insatisfactions de leurs clients pour différentes raisons :
             \par    
                 \begin{itemize}
@@ -87,18 +85,12 @@
                     résulter de la révélation des insatisfactions,
                     \item [\ding{226}] Pour ne pas se sentir dévalorisées.
                 \end{itemize}
-            Le but de l’évaluation de la satisfaction est donc :
+            Le but de l’évaluation de la satisfaction est donc : de recueillir l’avis des
+            clients sur les prestations et les produits délivrés par la société,
+            de repérer les sources d’insatisfaction, de réduire les insatisfactions que l’on juge
+            préjudiciables à la bonne marche des activités de la société, d’améliorer ainsi
+            l’image et la compétitivité de l’activité de la société. \cite*{Barouch2010}
             \par
-                \begin{itemize}
-                    \setlength{\itemsep}{0pt}
-                    \item [\ding{226}] de recueillir l’avis des clients sur les prestations
-                    et les produits délivrés par la société,
-                    \item [\ding{226}] de repérer les sources d’insatisfaction,
-                    \item [\ding{226}] de réduire les insatisfactions que l’on juge
-                    préjudiciables à la bonne marche des activités de la société,
-                    \item [\ding{226}] d’améliorer ainsi l’image et la compétitivité de l’activité
-                    de la société.
-                \end{itemize}
             Pour une évaluation, simplifiée, de la satisfaction on lance généralement
             une enquête suivant les étapes définies comme vu dans
             \cite[Tab. \ref{table:etapeDeRealistaionEnqSatisfat}]{Barouch2010} :
@@ -248,11 +240,6 @@
                 Les mots-clés sont : conversion des données, formation des utilisateurs,
                 déploiement, béta-tests. \cite{Roques2008}
             \end{enumerate}
-            Une phase peut-être divisée en itérations. Une itération est un circuit complet de développement
-            aboutissant à une livraison (interne ou externe) d’un produit exécutable.
-            Ce produit est un sous-ensemble du produit final en cours de développement, qui
-            croît incrémentalement d’itération en itération pour devenir le système final.
-            Chaque itération au sein d’une phase aboutit à une livraison exécutable du système.
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=130mm]{Processus_unifié_-_enchainements_d'activités_au_cours_du_cycle_de_vie.png}
@@ -262,7 +249,7 @@
             \end{figure}
             
             \subsubsection[Démarche UP centrée sur l’architecture]{Démarche UP centrée sur l’architecture}
-            Une architecture adaptée est la clé de voûte du succès d'un développement. Elle décrit
+            Une architecture adaptée est la clé de voûte du succès d’un développement. Elle décrit
             des choix stratégiques qui déterminent en grande partie les qualités du logiciel (adaptabilité,
             performances, fiabilité...). \cite{diga2001uml}
             il existe des digrammes nécessaires à modéliser pour la réalisation d’un processus unifié.
@@ -272,7 +259,8 @@
             les aspects d’architecture du logiciel. Ces deux aspects sont composés de cinq vues du
             logiciel à développer, organisés autour des besoins des utilisateurs.
             \par            
-            Voici les cinq vues regroupant différents diagrammes :
+            Voici les cinq vues regroupant, uniquement, les différents diagrammes que nous
+            utiliseront dans notre travail :
             \begin{enumerate}
                 \setlength{\itemsep}{0pt}
                 \item \textbf{La vue des besoins utilisateurs} est celle qui guide toutes les autres.
@@ -283,9 +271,7 @@
                 \begin{dinglist}{226}
                     \setlength{\itemsep}{0pt}
                     \item Le diagramme de cas d’utilisation représente les fonctionnalités (autrement
-                    dit cas d’utilisation) nécessaires aux utilisateurs. 
-                    \item Le diagramme de packages permet de décomposer le système en catégories
-                    ou parties plus facilement observables, appelés « packages ».
+                    dit cas d’utilisation) nécessaires aux utilisateurs.
                 \end{dinglist}
                 \item \textbf{La vue du processus}  démontre la décomposition du système en processus et en action ; les interactions
                 entre les processus ainsi que la synchronisation et la communication des activités
@@ -298,15 +284,6 @@
                     \item Le diagramme d’activité qui représente le déroulement des actions, sans utiliser
                     les objets. En phase d’analyse, il est utilisé pour consolider les spécifications d’un
                     cas d’utilisation.
-                    \item Le diagramme de collaboration (appelé également diagramme de communication)
-                    permet de mettre en évidence les échanges de messages entre objets.
-                    \item Le diagramme d’état-transition permet de décrire le cycle de vie des objets d’une
-                    classe.
-                    \item Le diagramme global d’interaction permet de donner une vue d’ensemble des
-                    interactions du système. Il est réalisé avec le même graphisme que le diagramme
-                    d’activité.
-                    \item Le diagramme de temps est destiné à l’analyse et la conception de systèmes ayant
-                    des contraintes temps-réel
                 \end{dinglist}
                 \item \textbf{La vue logique} a pour but d’identifier les éléments du domaine, les relations et
                 interactions entre ces éléments. Elle comprend :
@@ -314,10 +291,7 @@
                 \begin{dinglist}{226}
                     \setlength{\itemsep}{0pt}
                     \item Le diagramme de classes qui représente les entités
-                    (des informations) manipulées
-                    par les utilisateurs, dans la phase d’analyse.
-                    \item Le diagramme d’objets qui sert à illustrer les classes
-                    complexes en utilisant des exemples d’instances.
+                    (des informations) manipulées par les utilisateurs, dans la phase d’analyse.
                 \end{dinglist}
                 \item \textbf{La vue des composants} met en évidence les différentes parties qui
                 composeront le futur système (fichiers sources, bibliothèques, bases de données,
@@ -325,8 +299,6 @@
                 \par
                 \begin{dinglist}{226}
                     \setlength{\itemsep}{0pt}
-                    \item Le diagramme de structure composite qui décrit un
-                    objet complexe lors de son exécution.
                     \item Le diagramme de composants qui décrit tous les
                     composants utiles à l’exécution du système (applications, librairies,
                     instances de base de données, exécutables, etc.).

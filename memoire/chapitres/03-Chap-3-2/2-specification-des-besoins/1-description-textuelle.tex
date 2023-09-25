@@ -1,4 +1,7 @@
 \section[Spécification détaillée des besoins]{Spécification détaillée des besoins}
+Dans cette étape, nous allons détailler la description des besoins par la description textuelle
+des cas d’utilisation et la production de diagrammes de séquence système
+illustrant cette description textuelle. \cite*{audibert2008uml}  
     \subsection[Description textuelle des cas d'utilisation]{Description textuelle des cas d’utilisation}
         \subsubsection[Créer compte]{Créer compte}
             \begin{longtable}{p{4cm} p{9cm}}
@@ -85,16 +88,16 @@
 
         \subsubsection[Consulter avis]{Afficher avis}
             \begin{longtable}{p{4cm} p{9cm}}
-                \caption{Description textuelle du cas d’utilisation Consulter avis}
+                \caption{Description textuelle du cas d’utilisation Afficher avis}
                 \label{table:usecaseConsulterAvis}
                 \\\hline\hline
-                    \textbf{Cas d’utilisation} & \textbf{Consulter avis}
+                    \textbf{Cas d’utilisation} & \textbf{Afficher avis}
                 \\\hline\hline
                         \textbf{Acteur principal} & L’\textsc{internaute} et le \textsc{client}
                     \\
                         \textbf{Acteur secondaire} & -
                     \\
-                        \textbf{Objectifs} & L’\textsc{internaute} veut consulter les
+                        \textbf{Objectifs} & L’\textsc{internaute} veut afficher les
                         avis des clients (commentaires et évaluations données)
                     \\
                         \textbf{Préconditions} & -
@@ -152,34 +155,44 @@
             \\\bottomrule
         \end{longtable}
 
-        \subsubsection[Scanner jeton]{Valider jeton}
+        \subsubsection[Valider ticket]{Valider ticket}
         \begin{longtable}{p{4cm} p{9cm}}
-            \caption{Description textuelle du cas d’utilisation Valider jeton}
+            \caption{Description textuelle du cas d’utilisation Valider ticket}
             \label{table:usecaseScannerJ}
             \\\hline\hline
-                \textbf{Cas d’utilisation} & \textbf{Valider jeton}
+                \textbf{Cas d’utilisation} & \textbf{Valider ticket}
             \\\hline\hline
                     \textbf{Acteur principal} & Le \textsc{client}
                 \\
                     \textbf{Acteur secondaire} & -
                 \\
                     \textbf{Objectifs} & Le \textsc{client} veut vérifier la
-                    validité de son billet de bus (jeton).
+                    validité de son ticket ticket de bus.
                 \\
                     \textbf{Préconditions} & Le \textsc{client} s’est authentifié.
                 \\
-                    \textbf{Postcondition} & Le \textsc{client} a vérifier la validité de son jeton.
+                    \textbf{Postcondition} & Le \textsc{client} a vérifié la validité de son ticket.
                 \\
                 \textbf{Scénario nominal} &
                     \begin{enumerate}[leftmargin=*]
-                        \item dd
-                        \item ddd
+                        \item Le \textsc{client} clique sur valider ticket dans
+                        l’interface de \textsc{donner avis}
+                        \item Le système affiche un formulaire de validation de ticket
+                        \item Le \textsc{client} saisie le code du ticket et valide.
+                        \item Le système vérifie la validité du code saisie et l’enregistre.
+                        \item Le système affiche la page donner avis.
                     \end{enumerate}
                 \\
                 \textbf{Scénario alternatif} &
                     \begin{enumerate}[leftmargin=*]
-                        \item mm
-                        \item kk
+                        \item Modifier
+                    \end{enumerate}
+                \\
+                \textbf{Exception} &
+                \begin{enumerate}[leftmargin=*]
+                        \item Le système détecte que les informations saisies sont incorrects et communique à
+                        l’utilisateur que les informations saisies sont incorrectes sous forme d’erreur.
+                        (Le code a déjà était utilisé, par exemple)
                     \end{enumerate}
             \\\bottomrule
         \end{longtable}
@@ -199,7 +212,7 @@
                     les différents service offert par l’entreprise.
                 \\
                     \textbf{Préconditions} & Le \textsc{client} s’est authentifié et
-                    a valider son jeton.
+                    il a validé son ticket.
                 \\
                     \textbf{Postcondition} & Le \textsc{client} a émis son avis.
                 \\
@@ -213,71 +226,99 @@
                 \\
                 \textbf{Scénario alternatif} &
                     \begin{enumerate}[leftmargin=*]
+                        \item Modifie les informations.
+                    \end{enumerate}
+                \\
+                \textbf{Exception} &
+                    \begin{enumerate}[leftmargin=*]
                         \item Le \textsc{client} ne remplit pas le formulaire
                         dans sa totalité.
                     \end{enumerate}
             \\\bottomrule
         \end{longtable}
 
-        \subsubsection[Établir rapport]{Établir rapport}
+        \subsubsection[Établir rapport]{Envoyer message}
         \begin{longtable}{p{4cm} p{9cm}}
-            \caption{Description textuelle du cas d’utilisation Établir rapport}
+            \caption{Description textuelle du cas d’utilisation Envoyer message}
             \label{table:usecaseEtablirCompte}
             \\\hline\hline
-                \textbf{Cas d’utilisation} & \textbf{Établir rapport}
+                \textbf{Cas d’utilisation} & \textbf{Envoyer message}
             \\\hline\hline
-                    \textbf{Acteur principal} & aa
+                    \textbf{Acteur principal} & Le \textsc{Manager}
                 \\
-                    \textbf{Acteur secondaire} & bb
+                    \textbf{Acteur secondaire} & -
                 \\
-                    \textbf{Objectifs} & dd
+                    \textbf{Objectifs} & Le \textsc{Manager} veut envoyer des messages 
+                    promotionnels aux clients.
                 \\
-                    \textbf{Préconditions} & dd
+                    \textbf{Préconditions} & Le \textsc{Manager} s’est authentifié.
+                \\
+                    \textbf{Postcondition} & Le \textsc{Manager} a envoyé le(s) message(s)
                 \\
                 \textbf{Scénario nominal} &
                     \begin{enumerate}[leftmargin=*]
-                        \item dd
-                        \item ddd
+                        \item Le \textsc{Manager} clique sur Envoyer message.
+                        \item Le système affiche un formulaire.
+                        \item Le \textsc{Manager} rempli le formulaire (en-tête du message, le corps
+                        ainsi que le(s) destinataire(s))
+                        \item Le \textsc{Manager} chois la méthode d’envoi (mail ou par mobile) et valide.
+                        \item Le système envoi le(s) message(s).
                     \end{enumerate}
                 \\
                 \textbf{Scénario alternatif} &
                     \begin{enumerate}[leftmargin=*]
-                        \item mm
-                        \item kk
+                        \item Modifier le message
                     \end{enumerate}
                 \\
-                \textbf{Postcondition}
+                \textbf{Exception} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item Le système détecte que les champs obligatoires sont vides
+                        et communique à l’utilisateur que les champs sont incorrectes sous forme d’erreur.
+                    \end{enumerate}
             \\\bottomrule
         \end{longtable}
 
-        \subsubsection[Vendre billet]{Vendre billet}
+        \subsubsection[Vendre ticket]{Vendre ticket}
         \begin{longtable}{p{4cm} p{9cm}}
-            \caption{Description textuelle du cas d’utilisation Vendre billet}
+            \caption{Description textuelle du cas d’utilisation Vendre ticket}
             \label{table:usecaseVendreBill}
             \\\hline\hline
-                \textbf{Cas d’utilisation} & \textbf{Vendre billet}
+                \textbf{Cas d’utilisation} & \textbf{Vendre ticket}
             \\\hline\hline
-                    \textbf{Acteur principal} & aa
+                    \textbf{Acteur principal} & Le \textsc{guichetier}
                 \\
-                    \textbf{Acteur secondaire} & bb
+                    \textbf{Acteur secondaire} & -
                 \\
-                    \textbf{Objectifs} & dd
+                    \textbf{Objectifs} & Le \textsc{guichetier} veut vendre un ticket de bus.
                 \\
-                    \textbf{Préconditions} & dd
+                    \textbf{Préconditions} & Le \textsc{guichetier} s’est authentifié.
+                \\
+                    \textbf{Postcondition} & Le \textsc{guichetier} a vendu un ticket de bus.
                 \\
                 \textbf{Scénario nominal} &
                     \begin{enumerate}[leftmargin=*]
-                        \item dd
-                        \item ddd
+                        \item Le \textsc{guichetier} clique sur vendre ticket.
+                        \item Le système affiche le formulaire de ventes.
+                        \item Le \textsc{guichetier} entre les informations concernant
+                        la vente d’un ticket de bus notamment, les informations du passager (nom,
+                        numéro de téléphone, email, adresse, ...), les informations du voyage
+                        (destination, horaire, place, numéro bus)
+                        \item Le \textsc{guichetier} valide le formulaire.
+                        \item Le système vérifie et enregistre les informations.
+                        \item Le système imprime le ticket.
                     \end{enumerate}
                 \\
                 \textbf{Scénario alternatif} &
                     \begin{enumerate}[leftmargin=*]
-                        \item mm
-                        \item kk
+                        \item Modifier les informations
                     \end{enumerate}
                 \\
-                \textbf{Postcondition}
+                \textbf{Exception} &
+                    \begin{enumerate}[leftmargin=*]
+                        \item Le système détecte que les informations saisies sont incorrects et communique à
+                        l’utilisateur que les informations saisies sont incorrectes sous forme d’erreur.
+                        (Le bus n est plein, par exemple)
+                    \end{enumerate}
             \\\bottomrule
         \end{longtable}
 
@@ -405,34 +446,38 @@
             \\\bottomrule
         \end{longtable}
 
-        \subsubsection[Consulter rapport]{Consulter rapport}
+        \subsubsection[Consulter rapport journalier]{Consulter rapport journalier}
         \begin{longtable}{p{4cm} p{9cm}}
-            \caption{Description textuelle du cas d’utilisation Consulter rapport}
-            \label{table:usecaseConsulterRapport}
+            \caption{Description textuelle du cas d’utilisation Consulter rapport journalier}
+            \label{table:usecaseConsulterRapportJ}
             \\\hline\hline
-                \textbf{Cas d’utilisation} & \textbf{Consulter rapport}
+                \textbf{Cas d’utilisation} & \textbf{Consulter rapport journalier}
             \\\hline\hline
-                    \textbf{Acteur principal} & aa
+                    \textbf{Acteur principal} & Le \textsc{Manager}
                 \\
-                    \textbf{Acteur secondaire} & bb
+                    \textbf{Acteur secondaire} & -
                 \\
-                    \textbf{Objectifs} & dd
+                    \textbf{Objectifs} & Le \textsc{Manager} veut voir le rapport des ventes
+                    des tickets.
                 \\
-                    \textbf{Préconditions} & dd
+                    \textbf{Préconditions} & Le \textsc{Manager} s’est authentifié.
+                \\
+                    \textbf{Postcondition} & Le \textsc{Manager} a vu le rapport.
                 \\
                 \textbf{Scénario nominal} &
                     \begin{enumerate}[leftmargin=*]
-                        \item dd
-                        \item ddd
+                        \item Le \textsc{manager} clique sur consulter rapport.
+                        \item Le système affiche l’interface des rapports.
+                        \item Le \textsc{manager} clique sur un rapport.
+                        \item Le système affiche le contenu du rapport.
                     \end{enumerate}
                 \\
-                \textbf{Scénario alternatif} &
+                \textbf{Scénario alternatif} & -
+                \\
+                \textbf{Exception} &
                     \begin{enumerate}[leftmargin=*]
-                        \item mm
-                        \item kk
+                        \item Système indisponible
                     \end{enumerate}
-                \\
-                \textbf{Postcondition}
             \\\bottomrule
         \end{longtable}
 \pagebreak
