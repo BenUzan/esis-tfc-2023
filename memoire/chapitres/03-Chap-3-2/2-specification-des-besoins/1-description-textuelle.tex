@@ -19,8 +19,6 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                     \\
                         \textbf{Préconditions} & -
                     \\
-                        \textbf{Postcondition} & Un compte a était créé.
-                    \\
                         \textbf{Scénario nominal} &
                             \begin{enumerate}[leftmargin=*]
                                 \item L’\textsc{internaute} clique sur créer compte et le
@@ -37,13 +35,21 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                     \\
                         \textbf{Scénario alternatif} &
                             \begin{enumerate}[leftmargin=*]
-                                \item À partir de l’étape numéro 3 du scenario nominal
-                                le système vérifie et ne valide pas le formulaire
-                                \item Retour à l’étape numéro 1 du scénario principal
+                                \item [A.] Annuler
+                                \item [B.] Modifier
                             \end{enumerate}
+                    \\
+                        \textbf{Exception} &
+                            \begin{enumerate}
+                                \item Le système détecte que les champs remplis sont
+                                incorrectes et communique à l’utilisateur que les
+                                informations saisies sont incorrectes sous forme
+                                d’erreur.
+                            \end{enumerate}
+                    \\
+                        \textbf{Postcondition} & Un compte a était créé.    
                 \\\bottomrule
             \end{longtable}
-            %\pagebreak
 
         \subsubsection[S’authentifier]{S’authentifier}
             \begin{longtable}{p{4cm} p{9cm}}
@@ -61,8 +67,6 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                     \\
                         \textbf{Préconditions} & -
                     \\
-                    \textbf{Postcondition} & L’utilisateur a accès au système
-                    \\
                     \textbf{Scénario nominal} &
                         \begin{enumerate}[leftmargin=*]
                             \item L’utilisateur saisis les informations de connexion à savoir (le mot de
@@ -73,8 +77,8 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                     \\
                     \textbf{Scénario alternatif} &
                     \begin{enumerate}[leftmargin=*]
-                            \item L’utilisateur annule la modification et le système revient sur l’interface de
-                            connexion.
+                            \item [A.] Annuler
+                            \item [B.] Modifier
                         \end{enumerate}
                     \\
                     \textbf{Exception} &
@@ -83,6 +87,8 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                             l’utilisateur que les informations saisies sont incorrectes sous forme d’erreur et
                             retourne à la page de connexion.
                         \end{enumerate}
+                    \\
+                    \textbf{Postcondition} & L’utilisateur a accès au système
                 \\\bottomrule
             \end{longtable}
 
@@ -102,8 +108,6 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                     \\
                         \textbf{Préconditions} & -
                     \\
-                    \textbf{Postcondition} & L’\textsc{internaute} a lu les avis.
-                    \\
                     \textbf{Scénario nominal} &
                         \begin{enumerate}[leftmargin=*]
                             \item L’\textsc{internaute} clique sur le bouton
@@ -113,8 +117,12 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                     \\
                     \textbf{Scénario alternatif} &
                         \begin{enumerate}[leftmargin=*]
-                            \item Le système est indisponible.
+                            \item -
                         \end{enumerate}
+                    \\
+                    \textbf{Exception} & Le système est indisponible et affiche un message d’erreur.
+                    \\
+                    \textbf{Postcondition} & L’\textsc{internaute} a lu les avis.
                 \\\bottomrule
             \end{longtable}
 
@@ -155,45 +163,45 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
             \\\bottomrule
         \end{longtable}
 
-        \subsubsection[Valider ticket]{Valider ticket}
+        \subsubsection[Scanner ticket]{Scanner ticket}
         \begin{longtable}{p{4cm} p{9cm}}
-            \caption{Description textuelle du cas d’utilisation Valider ticket}
+            \caption{Description textuelle du cas d’utilisation Scanner ticket}
             \label{table:usecaseScannerJ}
             \\\hline\hline
-                \textbf{Cas d’utilisation} & \textbf{Valider ticket}
+                \textbf{Cas d’utilisation} & \textbf{Scanner ticket}
             \\\hline\hline
                     \textbf{Acteur principal} & Le \textsc{client}
                 \\
                     \textbf{Acteur secondaire} & -
                 \\
                     \textbf{Objectifs} & Le \textsc{client} veut vérifier la
-                    validité de son ticket ticket de bus.
+                    validité de son ticket de bus grâce à son code QR.
                 \\
                     \textbf{Préconditions} & Le \textsc{client} s’est authentifié.
                 \\
-                    \textbf{Postcondition} & Le \textsc{client} a vérifié la validité de son ticket.
-                \\
                 \textbf{Scénario nominal} &
                     \begin{enumerate}[leftmargin=*]
-                        \item Le \textsc{client} clique sur valider ticket dans
+                        \item Le \textsc{client} clique sur scanner ticket dans
                         l’interface de \textsc{donner avis}
-                        \item Le système affiche un formulaire de validation de ticket
-                        \item Le \textsc{client} saisie le code du ticket et valide.
-                        \item Le système vérifie la validité du code saisie et l’enregistre.
+                        \item Le système affiche l’interface de scannage du ticket
+                        \item Le \textsc{client} ouvre la caméra, puis scanne le code QR.
+                        \item Le système vérifie le code QR, puis l’enregistre.
                         \item Le système affiche la page donner avis.
                     \end{enumerate}
                 \\
                 \textbf{Scénario alternatif} &
                     \begin{enumerate}[leftmargin=*]
-                        \item Modifier
+                        \item [A.] Saisir code numérique.
                     \end{enumerate}
                 \\
                 \textbf{Exception} &
                 \begin{enumerate}[leftmargin=*]
-                        \item Le système détecte que les informations saisies sont incorrects et communique à
+                        \item Le système détecte que le code QR saisies sont incorrects et communique à
                         l’utilisateur que les informations saisies sont incorrectes sous forme d’erreur.
                         (Le code a déjà était utilisé, par exemple)
                     \end{enumerate}
+                \\
+                \textbf{Postcondition} & Le \textsc{client} a vérifié la validité du code QR de son ticket.
             \\\bottomrule
         \end{longtable}
 
