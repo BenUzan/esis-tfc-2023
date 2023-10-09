@@ -59,6 +59,7 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                     \textbf{Cas d’utilisation} & \textbf{S’authentifier}
                 \\\hline\hline
                         \textbf{Acteur principal} & L’\textsc{internaute}, le \textsc{client},
+                        le \textsc{contrôleur},
                         le \textsc{guichetier}, le \textsc{manager} et l’\textsc{administrateur}
                     \\
                         \textbf{Acteur secondaire} & -
@@ -170,23 +171,23 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
             \\\hline\hline
                 \textbf{Cas d’utilisation} & \textbf{Scanner ticket}
             \\\hline\hline
-                    \textbf{Acteur principal} & Le \textsc{client}
+                    \textbf{Acteur principal} & Le \textsc{client} et le \textsc{contrôleur}
                 \\
                     \textbf{Acteur secondaire} & -
                 \\
-                    \textbf{Objectifs} & Le \textsc{client} veut vérifier la
+                    \textbf{Objectifs} & L’utilisateur veut vérifier la
                     validité de son ticket de bus grâce à son code QR.
                 \\
-                    \textbf{Préconditions} & Le \textsc{client} s’est authentifié.
+                    \textbf{Préconditions} & L’utilisateur s’est authentifié.
                 \\
                 \textbf{Scénario nominal} &
                     \begin{enumerate}[leftmargin=*]
-                        \item Le \textsc{client} clique sur scanner ticket dans
-                        l’interface de \textsc{donner avis}
+                        \item L’utilisateur clique sur scanner ticket dans
+                        l’interface de \textsc{donner avis} ou \textsc{vérifier ticket} si c’est
+                        le contrôleur
                         \item Le système affiche l’interface de scannage du ticket
-                        \item Le \textsc{client} ouvre la caméra, puis scanne le code QR.
+                        \item L’utilisateur ouvre la caméra, puis scanne le code QR.
                         \item Le système vérifie le code QR, puis l’enregistre.
-                        \item Le système affiche la page donner avis.
                     \end{enumerate}
                 \\
                 \textbf{Scénario alternatif} &
@@ -196,8 +197,8 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                 \\
                 \textbf{Exception} &
                 \begin{enumerate}[leftmargin=*]
-                        \item Le système détecte que le code QR saisies sont incorrects et communique à
-                        l’utilisateur que les informations saisies sont incorrectes sous forme d’erreur.
+                        \item Le système détecte que le code QR scanner est incorrect et le communique à
+                        l’utilisateur sous forme d’erreur.
                         (Le code a déjà était utilisé, par exemple)
                     \end{enumerate}
                 \\
@@ -313,6 +314,7 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                         (destination, horaire, place, numéro bus)
                         \item Le \textsc{guichetier} valide le formulaire.
                         \item Le système vérifie et enregistre les informations.
+                        \item Le système génère un code QR
                         \item Le système imprime le ticket.
                     \end{enumerate}
                 \\
@@ -326,69 +328,9 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
                         \item Le système détecte que les informations saisies sont incorrects et communique à
                         l’utilisateur que les informations saisies sont incorrectes sous forme d’erreur.
                         (Le bus n est plein, par exemple)
+                        \item Le système signale qu’il y a plus de place disponible pour le voyage
+                        demander
                     \end{enumerate}
-            \\\bottomrule
-        \end{longtable}
-
-        \subsubsection[Gérer compte]{Gérer compte}
-        \begin{longtable}{p{4cm} p{9cm}}
-            \caption{Description textuelle du cas d’utilisation Gérer compte}
-            \label{table:usecaseGereCompte}
-            \\\hline\hline
-                \textbf{Cas d’utilisation} & \textbf{Gérer compte}
-            \\\hline\hline
-                    \textbf{Acteur principal} & aa
-                \\
-                    \textbf{Acteur secondaire} & bb
-                \\
-                    \textbf{Objectifs} & dd
-                \\
-                    \textbf{Préconditions} & dd
-                \\
-                \textbf{Scénario nominal} &
-                    \begin{enumerate}[leftmargin=*]
-                        \item dd
-                        \item ddd
-                    \end{enumerate}
-                \\
-                \textbf{Scénario alternatif} &
-                    \begin{enumerate}[leftmargin=*]
-                        \item mm
-                        \item kk
-                    \end{enumerate}
-                \\
-                \textbf{Postcondition}
-            \\\bottomrule
-        \end{longtable}
-
-        \subsubsection[Ajouter évaluation]{Ajouter évaluation}
-        \begin{longtable}{p{4cm} p{9cm}}
-            \caption{Description textuelle du cas d’utilisation Ajouter évaluation}
-            \label{table:usecaseAjouterEval}
-            \\\hline\hline
-                \textbf{Cas d’utilisation} & \textbf{Ajouter évaluation}
-            \\\hline\hline
-                    \textbf{Acteur principal} & aa
-                \\
-                    \textbf{Acteur secondaire} & bb
-                \\
-                    \textbf{Objectifs} & dd
-                \\
-                    \textbf{Préconditions} & dd
-                \\
-                \textbf{Scénario nominal} &
-                    \begin{enumerate}[leftmargin=*]
-                        \item dd
-                        \item ddd
-                    \end{enumerate}
-                \\
-                \textbf{Scénario alternatif} &
-                    \begin{enumerate}[leftmargin=*]
-                        \item mm
-                        \item kk
-                    \end{enumerate}
-                \\
-                \textbf{Postcondition}
             \\\bottomrule
         \end{longtable}
 
@@ -399,27 +341,29 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
             \\\hline\hline
                 \textbf{Cas d’utilisation} & \textbf{Générer tableau de bord}
             \\\hline\hline
-                    \textbf{Acteur principal} & aa
+                    \textbf{Acteur principal} & L’\textsc{administrateur}
                 \\
-                    \textbf{Acteur secondaire} & bb
+                    \textbf{Acteur secondaire} & Le système et l’ETL
                 \\
-                    \textbf{Objectifs} & dd
+                    \textbf{Objectifs} & L’\textsc{administrateur} veut générer le rapport sous forme de tableau de bord
                 \\
-                    \textbf{Préconditions} & dd
+                    \textbf{Préconditions} & L’\textsc{administrateur} s’est authentifié.
+                \\
+                    \textbf{Postcondition} & Tableau de bord généré
                 \\
                 \textbf{Scénario nominal} &
                     \begin{enumerate}[leftmargin=*]
-                        \item dd
-                        \item ddd
+                        \item Ouvrir l’interface tableau de bord
+                        \item Interface ouverte.
+                        \item Générer tableau de bord.
+                        \item Le système charges les données
+                        \item Les données sont chargé et le tableau de bord générer.
                     \end{enumerate}
                 \\
                 \textbf{Scénario alternatif} &
                     \begin{enumerate}[leftmargin=*]
-                        \item mm
-                        \item kk
+                        \item -
                     \end{enumerate}
-                \\
-                \textbf{Postcondition}
             \\\bottomrule
         \end{longtable}
 
@@ -430,47 +374,48 @@ illustrant cette description textuelle. \cite*{audibert2008uml}
             \\\hline\hline
                 \textbf{Cas d’utilisation} & \textbf{Consulter tableau de bord}
             \\\hline\hline
-                    \textbf{Acteur principal} & aa
+                    \textbf{Acteur principal} & Le \textsc{manager}
                 \\
-                    \textbf{Acteur secondaire} & bb
+                    \textbf{Acteur secondaire} & -
                 \\
-                    \textbf{Objectifs} & dd
+                    \textbf{Objectifs} & Le \textsc{manager} veut consulter le tableau de bord.
                 \\
-                    \textbf{Préconditions} & dd
+                    \textbf{Préconditions} & Le \textsc{manager} s’est authentifié.
+                \\
+                    \textbf{Postcondition} & Le tableau de bord a été afficher.
                 \\
                 \textbf{Scénario nominal} &
                     \begin{enumerate}[leftmargin=*]
-                        \item dd
-                        \item ddd
+                        \item Le \textsc{manager} clique sur afficher tableau de bord
+                        \item Le système affiche l’interface du tableau de bord.
+                        \item Le \textsc{manager} sélectionne un graphique.
+                        \item Le système affiches les details.
                     \end{enumerate}
                 \\
                 \textbf{Scénario alternatif} &
                     \begin{enumerate}[leftmargin=*]
-                        \item mm
-                        \item kk
+                        \item -
                     \end{enumerate}
-                \\
-                \textbf{Postcondition}
             \\\bottomrule
         \end{longtable}
 
-        \subsubsection[Consulter rapport journalier]{Consulter rapport journalier}
+        \subsubsection[Envoyer Message]{Envoyer Message}
         \begin{longtable}{p{4cm} p{9cm}}
-            \caption{Description textuelle du cas d’utilisation Consulter rapport journalier}
+            \caption{Description textuelle du cas d’utilisation Envoyer Message}
             \label{table:usecaseConsulterRapportJ}
             \\\hline\hline
-                \textbf{Cas d’utilisation} & \textbf{Consulter rapport journalier}
+                \textbf{Cas d’utilisation} & \textbf{Envoyer Message}
             \\\hline\hline
-                    \textbf{Acteur principal} & Le \textsc{Manager}
+                    \textbf{Acteur principal} & Le \textsc{manager}
                 \\
                     \textbf{Acteur secondaire} & -
                 \\
-                    \textbf{Objectifs} & Le \textsc{Manager} veut voir le rapport des ventes
+                    \textbf{Objectifs} & Le \textsc{manager} veut voir le rapport des ventes
                     des tickets.
                 \\
-                    \textbf{Préconditions} & Le \textsc{Manager} s’est authentifié.
+                    \textbf{Préconditions} & Le \textsc{manager} s’est authentifié.
                 \\
-                    \textbf{Postcondition} & Le \textsc{Manager} a vu le rapport.
+                    \textbf{Postcondition} & Le \textsc{manager} a vu le rapport.
                 \\
                 \textbf{Scénario nominal} &
                     \begin{enumerate}[leftmargin=*]

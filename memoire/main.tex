@@ -1,6 +1,7 @@
 \documentclass[a4paper,12pt,oneside]{book}
 \usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=2cm]{geometry}
 \usepackage[skip=10pt plus1pt, indent=40pt]{parskip}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{newtxtext,newtxmath}
@@ -8,7 +9,7 @@
 \usepackage[acronym]{glossaries}
 \usepackage{booktabs}
 \usepackage{longtable}
-\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage{hyperref}
 \usepackage[labelfont=it, textfont=it, singlelinecheck=false]{caption}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -46,6 +47,9 @@
 \setlength{\tabcolsep}{12pt}
 \renewcommand{\arraystretch}{1}
 
+\newcommand{\HRule}{\rule{\linewidth}{0.25mm}} % Defines a new command for horizontal lines, change thickness here
+\newcommand{\HHRule}{\rule{300pt}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+
 %%% Parametres du sectionnement grace a sectsty
 \sectionfont{\selectfont\large}
 \subsectionfont{\selectfont\large\itshape}
@@ -63,9 +67,9 @@
 
 
 \author{Benjamin Uzan Muyumba}
-\title{La conception d’un système informatisé de fidélisation de la clientèle
+\title{Conception d’un système informatisé de fidélisation de la clientèle
 intégrant un système d’aide à la décision dans une entreprise de transport
-de biens et de personnes. Cas de la société de transport Classic Coach}
+de biens et de personnes. Cas de la société de transport Ngokaf Trans}
 
 \input{liminaire/acronymes.tex}
 
@@ -74,6 +78,7 @@ de biens et de personnes. Cas de la société de transport Classic Coach}
 \begin{document}
     \frontmatter
         \pagenumbering{Roman}
+        \include{liminaire/00-Page-de-garde}
         \include{liminaire/01-Epigraphe}
         \include{liminaire/in_memoriam}
         \include{liminaire/02-Dedicace}
@@ -91,6 +96,7 @@ de biens et de personnes. Cas de la société de transport Classic Coach}
         \include{chapitres/02-Chap-2}
         \include{chapitres/03-Chap-3}
         \include{chapitres/04-Chap-4}
+        \include{chapitres/05-Conclusion}
     \backmatter
         \appendix
         \printbibliography[heading=bibintoc,title={RÉFÉRENCES}]
