@@ -13,8 +13,7 @@
 \usepackage[labelfont=it, textfont=it, singlelinecheck=false]{caption}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{float}
-\usepackage{csquotes}
+\usepackage{float}\usepackage{csquotes}
 \usepackage{enumitem}
 \usepackage[explicit]{titlesec}
 \usepackage{sectsty}
@@ -29,47 +28,67 @@
 \fancyhead[R]{\thepage}
 \fancyhead[L]{}
 \fancyfoot{} % clear footer fields
-\fancyfoot[L]{}
-\fancyfoot[R]{}
+\fancyfoot[L]{\textit{TFC ESIS}}
+\fancyfoot[R]{\textit{MSI 2023}}
 \renewcommand\headrulewidth{0pt}
 \renewcommand\footrulewidth{0pt}
 
-%%% Importation des fichiers
+%------------------------------------------------
+%	Importation des fichiers
+%------------------------------------------------
 \addbibresource{main.bib}
 \graphicspath{ {./images} }
 
-%%% Profondure des section et du niveau
-%%% de consideration dans la bib
+%------------------------------------------------
+%	Profondeur des sections et niveau de
+%   consideration dans la TOC
+%------------------------------------------------
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{2}
 
-%%% Parametres des tableaux
+%------------------------------------------------
+%	Parametres des tableaux
+%------------------------------------------------
 \setlength{\tabcolsep}{12pt}
 \renewcommand{\arraystretch}{1}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.25mm}} % Defines a new command for horizontal lines, change thickness here
-\newcommand{\HHRule}{\rule{300pt}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
-
-%%% Parametres du sectionnement grace a sectsty
+%------------------------------------------------
+%	Parametres du sectionnement grace a
+%   sectsty
+%------------------------------------------------
 \sectionfont{\selectfont\large}
 \subsectionfont{\selectfont\large\itshape}
 \subsubsectionfont{\normalfont\large\itshape}
 \paragraphfont{\normalfont\large\itshape}
 
+%------------------------------------------------
+%	Parametres du sectionnement grace a
+%   titlesec
+%------------------------------------------------
 \titleformat{\chapter}[display]{\centering\selectfont\large\bfseries}{Chapitre \thechapter}{12pt}{\centering\MakeUppercase{#1}}
 \titlespacing{\chapter}{10pt}{-40pt}{30pt}
 
-%%% Traductions
+%------------------------------------------------
+%	Commandes de traduction
+%------------------------------------------------
 \addto\captionsfrench{\renewcommand{\listfigurename}{LISTE DES FIGURES}}
 \addto\captionsfrench{\renewcommand{\listtablename}{LISTE DES TABLEAUX}}
 \addto\captionsfrench{\renewcommand{\contentsname}{TABLE DES MATIÈRES}}
 \addto\captionsfrench{\def\tablename{Tableau}}
 
 
-\author{Benjamin Uzan Muyumba}
-\title{Conception d’un système informatisé de fidélisation de la clientèle
-intégrant un système d’aide à la décision dans une entreprise de transport
-de biens et de personnes. Cas de la société de transport Ngokaf Trans}
+%----------------------------------------------------------------------------------
+%	Informations des pages de gardes
+%----------------------------------------------------------------------------------
+\newcommand{\HRule}{\rule{\linewidth}{0.25mm}} % Ligne horizontal leger
+\newcommand{\HHRule}{\rule{300pt}{0.5mm}} % Ligne horizontal gras
+\newcommand{\ATfc}{UZAN MUYUMBA Benjamin} % Auteur du TFC
+\newcommand{\DTfc}{Prof. LISONGOMI BATIBONDA André} % Nom du directeur (Mr. Mme. Prof.)
+\newcommand{\Filiere}{Management des Systèmes d’Information} % Filerer ou option
+\newcommand{\TTfc}{MISE EN PLACE D’UN SYSTÈME DE FIDÉLISATION DE LA CLIENTÈLE
+INTÉGRANT UN MODULE D’AIDE À LA DÉCISION DANS UNE ENTREPRISE DE TRANSPORT
+DE BIENS ET DE PERSONNES\\\enquote{CAS DE LA SOCIÉTÉ NGOKAF TRANS}} % Sujet ou titre du TFC + cas
+\newcommand{\MATfc}{Novembre 2023} % Mois et annees de defense du TFc
 
 \input{liminaire/acronymes.tex}
 

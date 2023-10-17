@@ -94,7 +94,6 @@
             Pour une évaluation, simplifiée, de la satisfaction on lance généralement
             une enquête suivant les étapes définies comme vu dans
             \cite[Tab. \ref{table:etapeDeRealistaionEnqSatisfat}]{Barouch2010} :
-            %     $$\overline {x}=\sum_{i=1}^{n} w_{i} x_{i} \mathbin{/} \sum_{i=1}^{n} w_{i}$$
             \begin{longtable}{p{2cm} p{5cm} p{6cm}}
                 \caption{Étapes de réalisation d’une enquête de satisfaction}
                 \label{table:etapeDeRealistaionEnqSatisfat}
@@ -172,7 +171,7 @@
             \par
             \begin{figure}[h]
                 \centering
-                \includegraphics[width=100mm]{bi-image.jpg}
+                \includegraphics[width=100mm]{images/bi-image.jpg}
                 \caption{ Pyramide modélisant le processus de la BI}
                 \label{fig:pyramideBi}
             \end{figure}
@@ -181,7 +180,13 @@
             depuis la donnée brute provenant du \acrlong{si} (\acrshort{si})
             sources(ERP, CRM...), à la production de reportings et autres tableaux
             de bord. Pour ce faire le schéma ci-dessous illustre :
-
+            \par
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=130mm]{images/architecture-bi.jpg}
+                \caption{Architecture d’un Système d’Aide à la Décision}
+                \label{fig:archiBi}
+            \end{figure}
     \section[Cadre théorique]{Cadre théorique}
         \subsection[Le Processus Unifié (UP)]{Le Processus Unifié (\acrshort{up})}
             \subsubsection[Définition]{Définition}    
@@ -293,24 +298,25 @@
                     \item Le diagramme de classes qui représente les entités
                     (des informations) manipulées par les utilisateurs, dans la phase d’analyse.
                 \end{dinglist}
-                \item \textbf{La vue des composants} met en évidence les différentes parties qui
-                composeront le futur système (fichiers sources, bibliothèques, bases de données,
-                exécutables, etc.). Elle comprend :
-                \par
-                \begin{dinglist}{226}
-                    \setlength{\itemsep}{0pt}
-                    \item Le diagramme de composants qui décrit tous les
-                    composants utiles à l’exécution du système (applications, librairies,
-                    instances de base de données, exécutables, etc.).
-                \end{dinglist}
+                % \item \textbf{La vue des composants} met en évidence les différentes parties qui
+                % composeront le futur système (fichiers sources, bibliothèques, bases de données,
+                % exécutables, etc.). Elle comprend :
+                % \par
+                % \begin{dinglist}{226}
+                %     \setlength{\itemsep}{0pt}
+                %     \item Le diagramme de composants qui décrit tous les
+                %     composants utiles à l’exécution du système (applications, librairies,
+                %     instances de base de données, exécutables, etc.).
+                % \end{dinglist}
                 \par
                 \item \textbf{La vue de déploiement} décrit les ressources matérielles et la répartition des parties du
                 logiciel sur ces éléments. Elle ne comprend qu’un seul diagramme qui est :
                 \par
                 \begin{dinglist}{226}
-                    \item Le diagramme de déploiement qui correspond à la description de l’environnement
-                    d’exécution du système (matériel, réseau…) et de la façon dont les composants y sont
-                    installés.
+                    \item Le diagramme de déploiement permet de représenter l’architecture physique
+                    supportant l’exploitation du système. Cette architecture comprend des nœuds correspondant
+                    aux supports physiques (serveurs, routeurs…) ainsi que la répartition des artefacts
+                    logiciels (bibliothèques, exécutables…) sur ces nœuds. \cite*{gabay2008uml} 
                 \end{dinglist}
             \end{enumerate}
 
