@@ -3,10 +3,12 @@
     Ce chapitre décrira les différentes étapes par lesquelles nous
     sommes passé afin de réaliser notre application web. En premier
     lieu, notre chapitre débutera par l’environnement de réalisation
-    de la solution. Ensuite, nous montrerons notre base de données qui a
-    comme fondement le diagramme de modèle de domaine vu dans
-    le chapitre précèdent. Enfin, nous démontrerons la manière dont
-    nous avons choisi notre méthode, construit notre ..............
+    de la solution.
+    % Ensuite, nous montrerons notre base de données qui a
+    % comme fondement le diagramme de modèle de domaine vu dans
+    % le chapitre précèdent.
+    Enfin, nous démontrerons les outils que nous avons utilisés pour arriver à la réalisation de notre application et de
+    notre travail.
     \section[Environnement logiciel]{Environnement logiciel}
         \subsection[Choix des langages de développement]{Choix des langages de développement}
             \begin{itemize}
@@ -20,21 +22,34 @@
                 \item [\ding{226}] \textbf{Javascript :} c’est un langage de programmation des scripts utilisé dans les pages
                 web interactives. Nous l’avons choisi, car il permet de rendre le contenu mis à
                 jour de façon dynamique.
-                \item [\ding{226}] \textbf{Python :} est un langage portable, dynamique, extensible, gratuit, qui permet (sans l’imposer) une approche
-                modulaire et orienté objet de la programmation. Python est développé depuis 1989 par Guido van Rossum
-                et de nombreux contributeurs bénévoles. \cite*{Swinnen2012}
+                \item [\ding{226}] \textbf{PHP :}  est un langage de programmation, très proche syntaxiquement du langage C,
+                destiné à être intégré dans des pages HTML. Contrairement à d’autres langages, PHP
+                est principalement dédié à la production de pages HTML générées dynamiquement. \cite*{rigaux2005pratique} Il
+                est appelé langage script coté serveur. Nous l’avons choisi parce qu’il est
+                open source, ce qui fait qu’il possède une communauté très importante.
+                % \item [\ding{226}] \textbf{Python :} est un langage portable, dynamique, extensible, gratuit, qui permet (sans l’imposer) une approche
+                % modulaire et orienté objet de la programmation. Python est développé depuis 1989 par Guido van Rossum
+                % et de nombreux contributeurs bénévoles. \cite*{Swinnen2012}
             \end{itemize}
         \subsection[Choix des frameworks]{Choix des frameworks}
             \begin{itemize}
                 \setlength{\itemsep}{0pt}
-                \item [\ding{226}] \textbf{Bootstrap :}
-                \item [\ding{226}] \textbf{Django :} est construit sur une approche très modulaire ; il implémente avec efficacité
-                les notions de découplage et de réutilisabilité.
+                \item [\ding{226}] \textbf{Bootstrap :} est une collection d'outils utiles à la création
+                du design (graphisme, animation et interactions avec la page dans le navigateur, etc.) de sites
+                et d'applications web. C'est un ensemble qui contient des codes HTML et CSS, des
+                formulaires, boutons, outils de navigation et autres éléments interactifs, ainsi
+                que des extensions JavaScript en option. \cite*{Wikiboot}
+                % \item [\ding{226}] \textbf{Django :} est construit sur une approche très modulaire ; il implémente avec efficacité
+                % les notions de découplage et de réutilisabilité.
             \end{itemize}
         \subsection[Choix des outils de développement]{Choix des outils de développement}
             \begin{itemize}
                 \setlength{\itemsep}{0pt}
-                \item [\ding{226}] \textbf{GitHub Desktop :}
+                \item [\ding{226}] \textbf{GitHub :} est un service web d'hébergement et de gestion de
+                développement de logiciels, utilisant le logiciel de gestion de versions Git. \cite*{Wikigithub} 
+                \item [\ding{226}] \textbf{Visual Paradigm :} Visual Paradigm Online est un outil de conception de diagrammes en ligne
+                en vue d’une programmation. Il est capable de prendre en charge de nombreux diagrammes commerciaux et techniques comme
+                UML, BPMN, URD, DFD et SysML. Cette plateforme possède une interface graphique simplifiant la manipulation de ses fonctionnalités, et s’adapte à votre manière de travailler.
                 \item [\ding{226}] \textbf{Visual Studio Code :} est un éditeur de code
                 extensible développé par Microsoft. Il est un éditeur de code multiplateforme, open source et gratuit,
                 supportant une multitude de langages de programmation. \cite*{Wikivsc} Cet outil a était choisi
@@ -47,7 +62,8 @@
         \subsection[Choix du SGBD]{Choix du SGBD}
             \begin{itemize}
                 \setlength{\itemsep}{0pt}
-                \item [\ding{226}] \textbf{Microsoft SQL Server 2019 :}
+                \item [\ding{226}] \textbf{Microsoft SQL Server 2019 :} est un système de gestion de base de données (SGBD) en langage SQL
+                incorporant entre autres un SGBDR (SGBD Relationnel) développé et commercialisé par la société Microsoft.
             \end{itemize}
     \section[Environnement matériel]{Environnement matériel}
     L'ensemble du travail a était réalisé sur un ordinateur portable
@@ -64,18 +80,53 @@
         \item [\ding{228}] \textbf{Système d'exploitation :} Windows 10 Professionnel 22H2
     \end{itemize}
     \section[Présentation de l’interface de l’application]{Présentation de l’interface de l’application}
-            \subsection[Interface d’authentification]{Interface d’authentification}
+    \subsection[Page d'acceuil]{Page d'acceuil}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=130mm]{images/presentation-de-la-solution/home.png}
+        \captionof{figure}{Page d'acceuil}
+        \label{fig:mdSysteme}
+    \end{figure}    
+    \subsection[Interface d’authentification client]{Interface d’authentification client}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=130mm]{images/presentation-de-la-solution/connexion.png}
+            \captionof{figure}{Interface d’authentification client}
+            \label{fig:mdSysteme}
+        \end{figure}
+    \subsection[Interface de création de compte client]{Interface de création de compte client}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=130mm]{images/presentation-de-la-solution/creer-compte-client.png}
+            \captionof{figure}{Interface de création de compte client}
+            \label{fig:mdSysteme}
+        \end{figure}
+    \subsection[Interface avis]{Interface avis}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=130mm]{images/presentation-de-la-solution/avis.png}
+            \captionof{figure}{Interface avis}
+            \label{fig:mdSysteme}
+        \end{figure}
+    \subsection[Interface statistique]{Interface statistique}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=130mm]{images/presentation-de-la-solution/stat.png}
+            \captionof{figure}{Interface statistique}
+            \label{fig:mdSysteme}
+        \end{figure}    
+    \subsection[Interface d’authentification employer]{Interface d’authentification employer}
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=130mm]{images/presentation-de-la-solution/authentifier.png}
-                \captionof{figure}{Interface d’authentification}
+                \captionof{figure}{Interface d’authentification employer}
                 \label{fig:mdSysteme}
             \end{figure}
             \subsection[Interface de création de compte client]{Interface de création de compte client}
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=130mm]{images/presentation-de-la-solution/creer-compte.png}
-                \captionof{figure}{Interface de création de compte client}
+                \captionof{figure}{Interface de création de compte employer}
                 \label{fig:mdSysteme}
             \end{figure}
     \section[Conclusion partielle]{Conclusion partielle}
